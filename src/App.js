@@ -20,7 +20,7 @@ const App = () => {
 
     <div>
       <AuthContext.Provider value={{ dispatch, user }}>
-      <AppRouter />
+      <AppRouter/>
     </AuthContext.Provider>
     </div>
     

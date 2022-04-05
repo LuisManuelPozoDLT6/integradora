@@ -3,7 +3,7 @@ import "../../../assets/css/geinma.css";
 import FeatherIcon from "feather-icons-react";
 
 export const Incidence = (props) => {
-  console.log(props);
+  // console.log(props.index+" indice");
   const { incidence } = props;
   const { status, client, technical } = incidence;
   let color = "";
@@ -28,9 +28,9 @@ export const Incidence = (props) => {
       >
         <div
           className={
-            incidence.id % 2 == 0
-              ? "card-custom-img bg-azul"
-              : "card-custom-img bg-verde"
+            props.index % 2 == 0
+              ? "card-custom-img bg-verde"
+              : "card-custom-img bg-azul"
           }
         >
           <div
@@ -46,7 +46,6 @@ export const Incidence = (props) => {
               <FeatherIcon
                 icon={"calendar"}
                 size={18}
-                backgroundColor={"red"}
               ></FeatherIcon>{" "}
               {incidence.dateRegistered}
             </p>

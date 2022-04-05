@@ -15,6 +15,7 @@ import { ProductScreen } from "../product/ProductScreen";
 
 export const AppRouter = () => {
   const { user } = useContext(AuthContext);
+  // console.log(user.user)
   return (
     <Router>
       <Routes>
@@ -47,7 +48,7 @@ export const AppRouter = () => {
                       element={<SubcategoryScreen />}
                     />
 
-                    <Route path={"/incidences"} element={<Incidences />} />
+                    <Route path={"/incidences"} element={<Incidences user={user.user} />} />
 
                     <Route path={"/"} element={<ProductScreen />} />
 

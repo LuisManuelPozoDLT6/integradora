@@ -53,7 +53,7 @@ export const LoginScreen = () => {
               payload: response.data,
             };
             dispatch(action);
-            navigation("/products", { replace: true });
+            navigation("/incidences", { replace: true });
           }
         })
         .catch((error) => {
@@ -84,6 +84,7 @@ export const LoginScreen = () => {
   const handleReturn = () => {
     navigation("/");
   };
+
 
   useEffect(() => {
     document.title = "GEINMA | Login";
